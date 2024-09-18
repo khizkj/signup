@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eAmbulance Image Gallery</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to bottom right, #ffcccc, #ffe6e6);
+            color: #333333;
+        }
+
+        h1 {
+            color: #ff4d4d;
+            margin-bottom: 30px;
+            font-size: 2.5em; 
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin: 10px; /* Added margin for better spacing */
+            width: 100%; /* Ensure full width in the column */
+            max-width: 360px; /* Set max width for cards */
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            background-color: #ff4d4d; 
+            color: white; 
+        }
+
+        .card img {
+            height: 250px; /* Increased height for better visibility */
+            object-fit: cover; /* Maintain aspect ratio */
+            border-radius: 15px 15px 0 0; /* Rounded top corners */
+        }
+
+        .highlight {
+            color: #ffcccb;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">eAmbulance Types Gallery</h1>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="Ambulanceimages/First-Responder-Ambulance-1024x626.jpg.webp" alt="First Responder Ambulance" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">First Responder Ambulance</h5>
+                        <p class="card-text">Designed for rapid response to emergencies, equipped with basic life support systems.</p>
+                        <p><strong>Price:</strong> $30,000 | <strong>AC:</strong> Yes | <strong>Region:</strong> Urban Areas</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="Ambulanceimages/Isolation-Ambulance.jpg.webp" alt="Isolation Ambulance" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Isolation Ambulance</h5>
+                        <p class="card-text">Specialized for transporting infectious patients safely and securely.</p>
+                        <p><strong>Price:</strong> $45,000 | <strong>AC:</strong> Yes | <strong>Region:</strong> Hospitals & Clinics</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="Ambulanceimages/Advanced.jpg.webp" alt="Advanced Life Support Ambulance" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Advanced Life Support Ambulance</h5>
+                        <p class="card-text">Equipped with advanced medical equipment for critical care during transport.</p>
+                        <p><strong>Price:</strong> $60,000 | <strong>AC:</strong> Yes | <strong>Region:</strong> Major Cities</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="Ambulanceimages/Neonatal-Ambulance.jpg.webp" alt="Neonatal Ambulance" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Neonatal Ambulance</h5>
+                        <p class="card-text">Designed specifically for transporting newborns and infants safely.</p>
+                        <p><strong>Price:</strong> $50,000 | <strong>AC:</strong> Yes | <strong>Region:</strong> Hospitals</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="Ambulanceimages/Ambulance-Bus.jpeg.webp" alt="Ambulance Bus" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Ambulance Bus</h5>
+                        <p class="card-text">A large vehicle designed for mass casualty incidents, accommodating multiple patients.</p>
+                        <p><strong>Price:</strong> $120,000 | <strong>AC:</strong> Yes | <strong>Region:</strong> Disaster Zones</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="Ambulanceimages/MVA-Ambulance.jpg.webp" alt="MVA Ambulance" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">MVA Ambulance</h5>
+                        <p class="card-text">Specialized for multiple victim assistance during emergencies like accidents.</p>
+                        <p><strong>Price:</strong> $40,000 | <strong>AC:</strong> Yes | <strong>Region:</strong> High Traffic Areas</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="Ambulanceimages/Fixed-Wing-Air-Ambulance-1024x585.jpeg.webp" alt="Fixed-Wing Air Ambulance" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Fixed-Wing Air Ambulance</h5>
+                        <p class="card-text">Used for long-distance patient transport, providing rapid access to remote areas.</p>
+                        <p><strong>Price:</strong> $200,000 | <strong>AC:</strong> Yes | <strong>Region:</strong> Remote Areas</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="Ambulanceimages/Rapid-Organ-Recovery-Ambulance.jpg.webp" alt="Rapid Organ Recovery Ambulance" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Rapid Organ Recovery Ambulance</h5>
+                        <p class="card-text">Designed for the swift transport of organs for transplantation, maintaining viability.</p>
+                        <p><strong>Price:</strong> $70,000 | <strong>AC:</strong> Yes | <strong>Region:</strong> Urban Areas</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="Ambulanceimages/Military-Ambulance.jpg.webp" alt="Military Ambulance" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Military Ambulance</h5>
+                        <p class="card-text">Built for rugged conditions to provide care in combat zones.</p>
+                        <p><strong>Price:</strong> $90,000 | <strong>AC:</strong> No | <strong>Region:</strong> Combat Zones</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="Ambulanceimages/Helicopter-Ambulance.jpg.webp" alt="Helicopter Ambulance" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Helicopter Ambulance</h5>
+                        <p class="card-text">Offers rapid air transport for critical care patients, especially in inaccessible areas.</p>
+                        <p><strong>Price:</strong> $250,000 | <strong>AC:</strong> Yes | <strong>Region:</strong> Remote Areas</
