@@ -9,7 +9,7 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background: linear-gradient(to bottom right, #ffcccc, #ffe6e6);
+            background: white;
             color: #333333;
         }
 
@@ -28,8 +28,6 @@
             background-color: #fff;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             margin: 10px;
-            width: 100%;
-            max-width: 360px;
         }
 
         .card:hover {
@@ -45,13 +43,32 @@
             border-radius: 15px 15px 0 0;
         }
 
-        .highlight {
-            color: #ffcccb;
-            font-weight: bold;
+        .pagination {
+            margin-top: 30px;
         }
 
-        .hidden {
-            display: none;
+        .pagination .page-item.active .page-link {
+            background-color: #ff4d4d;
+            border-color: #ff4d4d;
+            color: white;
+        }
+
+        .pagination .page-link {
+            border: 1px solid #ff4d4d;
+            border-radius: 5px;
+            color: #ff4d4d;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .pagination .page-link:hover {
+            background-color: #ff4d4d;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                max-width: 100%;
+            }
         }
     </style>
 </head>
@@ -63,22 +80,86 @@
             <ul class="pagination justify-content-center" id="pagination"></ul>
         </nav>
     </div>
+    <footer class="text-center text-lg-start bg-body-tertiary text-muted">
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+          <div class="me-5 d-none d-lg-block">
+            <span>Get connected with us on social networks:</span>
+          </div>
+          <div>
+            <a href="" class="me-4 text-reset">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fab fa-google"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </section>
+      
+        <section>
+          <div class="container text-center text-md-start mt-5">
+            <div class="row mt-3">
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <h6 class="text-uppercase fw-bold mb-4">
+                  <i class="fas fa-gem me-3"></i>Company name
+                </h6>
+                <p>
+                  Here you can use rows and columns to organize your footer content. Lorem ipsum
+                  dolor sit amet, consectetur adipisicing elit.
+                </p>
+              </div>
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <h6 class="text-uppercase fw-bold mb-4">Products</h6>
+                <p><a href="#!" class="text-reset">Angular</a></p>
+                <p><a href="#!" class="text-reset">React</a></p>
+                <p><a href="#!" class="text-reset">Vue</a></p>
+                <p><a href="#!" class="text-reset">Laravel</a></p>
+              </div>
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <h6 class="text-uppercase fw-bold mb-4">Useful links</h6>
+                <p><a href="#!" class="text-reset">Pricing</a></p>
+                <p><a href="#!" class="text-reset">Settings</a></p>
+                <p><a href="#!" class="text-reset">Orders</a></p>
+                <p><a href="#!" class="text-reset">Help</a></p>
+              </div>
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+                <p><i class="fas fa-envelope me-3"></i> info@example.com</p>
+                <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+                <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </footer>
 
     <script>
         const ambulances = [
-            { title: "First Responder Ambulance", image: "Ambulanceimages/First-Responder-Ambulance-1024x626.jpg.webp", text: "Designed for rapid response to emergencies, equipped with basic life support systems.", price: "$30,000", ac: "Yes", region: "Urban Areas" },
-            { title: "Isolation Ambulance", image: "Ambulanceimages/Isolation-Ambulance.jpg.webp", text: "Specialized for transporting infectious patients safely and securely.", price: "$45,000", ac: "Yes", region: "Hospitals & Clinics" },
-            { title: "Advanced Life Support Ambulance", image: "Ambulanceimages/Advanced.jpg.webp", text: "Equipped with advanced medical equipment for critical care during transport.", price: "$60,000", ac: "Yes", region: "Major Cities" },
-            { title: "Neonatal Ambulance", image: "Ambulanceimages/Neonatal-Ambulance.jpg.webp", text: "Designed specifically for transporting newborns and infants safely.", price: "$50,000", ac: "Yes", region: "Hospitals" },
-            { title: "Ambulance Bus", image: "Ambulanceimages/Ambulance-Bus.jpeg.webp", text: "A large vehicle designed for mass casualty incidents, accommodating multiple patients.", price: "$120,000", ac: "Yes", region: "Disaster Zones" },
-            { title: "MVA Ambulance", image: "Ambulanceimages/MVA-Ambulance.jpg.webp", text: "Specialized for multiple victim assistance during emergencies like accidents.", price: "$40,000", ac: "Yes", region: "High Traffic Areas" },
-            { title: "Fixed-Wing Air Ambulance", image: "Ambulanceimages/Fixed-Wing-Air-Ambulance-1024x585.jpeg.webp", text: "Used for long-distance patient transport, providing rapid access to remote areas.", price: "$200,000", ac: "Yes", region: "Remote Areas" },
-            { title: "Rapid Organ Recovery Ambulance", image: "Ambulanceimages/Rapid-Organ-Recovery-Ambulance.jpg.webp", text: "Designed for the swift transport of organs for transplantation, maintaining viability.", price: "$70,000", ac: "Yes", region: "Urban Areas" },
-            { title: "Military Ambulance", image: "Ambulanceimages/Military-Ambulance.jpg.webp", text: "Built for rugged conditions to provide care in combat zones.", price: "$90,000", ac: "No", region: "Combat Zones" },
-            { title: "Helicopter Ambulance", image: "Ambulanceimages/Helicopter-Ambulance.jpg.webp", text: "Offers rapid air transport for critical care patients, especially in inaccessible areas.", price: "$250,000", ac: "Yes", region: "Remote Areas" }
+            { title: "First Responder Ambulance", image: "assets/img/Ambulanceimages/First-Responder-Ambulance-1024x626.jpg.webp", text: "Designed for rapid response to emergencies, equipped with basic life support systems.", price: "$30,000", ac: "Yes", region: "Urban Areas" },
+            { title: "Isolation Ambulance", image: "assets/img/Ambulanceimages/Isolation-Ambulance.jpg.webp", text: "Specialized for transporting infectious patients safely and securely.", price: "$45,000", ac: "Yes", region: "Hospitals & Clinics" },
+            { title: "Advanced Life Support assets/img/Ambulance", image: "Ambulanceimages/Advanced.jpg.webp", text: "Equipped with advanced medical equipment for critical care during transport.", price: "$60,000", ac: "Yes", region: "Major Cities" },
+            { title: "Neonatal Ambulance", image: "assets/img/Ambulanceimages/Neonatal-Ambulance.jpg.webp", text: "Designed specifically for transporting newborns and infants safely.", price: "$50,000", ac: "Yes", region: "Hospitals" },
+            { title: "Ambulance Bus", image: "assets/img/Ambulanceimages/Ambulance-Bus.jpeg.webp", text: "A large vehicle designed for mass casualty incidents, accommodating multiple patients.", price: "$120,000", ac: "Yes", region: "Disaster Zones" },
+            { title: "MVA Ambulance", image: "assets/img/Ambulanceimages/MVA-Ambulance.jpg.webp", text: "Specialized for multiple victim assistance during emergencies like accidents.", price: "$40,000", ac: "Yes", region: "High Traffic Areas" },
+            { title: "Fixed-Wing Air Ambulance", image: "assets/img/Ambulanceimages/Fixed-Wing-Air-Ambulance-1024x585.jpeg.webp", text: "Used for long-distance patient transport, providing rapid access to remote areas.", price: "$200,000", ac: "Yes", region: "Remote Areas" },
+            { title: "Rapid Organ Recovery Ambulance", image: "assets/img/Ambulanceimages/Rapid-Organ-Recovery-Ambulance.jpg.webp", text: "Designed for the swift transport of organs for transplantation, maintaining viability.", price: "$70,000", ac: "Yes", region: "Urban Areas" },
+            { title: "Military Ambulance", image: "assets/img/Ambulanceimages/Military-Ambulance.jpg.webp", text: "Built for rugged conditions to provide care in combat zones.", price: "$90,000", ac: "No", region: "Combat Zones" },
+            { title: "Helicopter Ambulance", image: "assets/img/Ambulanceimages/Helicopter-Ambulance.jpg.webp", text: "Offers rapid air transport for critical care patients, especially in inaccessible areas.", price: "$250,000", ac: "Yes", region: "Remote Areas" }
         ];
 
-        const itemsPerPage = 4;
+        const itemsPerPage = 6;
         let currentPage = 1;
 
         function displayCards(page) {
@@ -108,14 +189,17 @@
         function setupPagination() {
             const pagination = document.getElementById('pagination');
             const pageCount = Math.ceil(ambulances.length / itemsPerPage);
+            pagination.innerHTML = '';
 
             for (let i = 1; i <= pageCount; i++) {
                 const li = document.createElement('li');
-                li.className = 'page-item';
+                li.className = `page-item ${i === currentPage ? 'active' : ''}`;
                 li.innerHTML = `<a class="page-link" href="#">${i}</a>`;
-                li.addEventListener('click', function() {
+                li.addEventListener('click', function(event) {
+                    event.preventDefault();
                     currentPage = i;
                     displayCards(currentPage);
+                    setupPagination(); // Update pagination styles
                 });
                 pagination.appendChild(li);
             }
